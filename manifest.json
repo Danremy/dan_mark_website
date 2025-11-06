@@ -1,0 +1,14 @@
+{
+    "manifest_version": 3,
+    "version": "2.0",
+    "name": "蛋の收藏管理器",
+    "description": "LoveYou",
+    "action": {
+        "default_popup": "index.html",
+        "default_icon": "icon.png"
+    },
+    "permissions": [
+        "tabs",
+        "storage"
+    ]
+}

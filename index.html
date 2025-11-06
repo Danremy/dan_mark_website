@@ -1,0 +1,37 @@
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <title>网站收藏管理器</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+       <div class="container">
+        <header>
+            <h1>蛋の网站收藏管理器</h1>
+        </header>
+
+        <div class="search-section">
+            <input type="text" id="search-input" placeholder="🔍 搜索标签或网址...">
+        </div>
+        
+        <div class="input-section">
+            <input type="text" id="url-input" placeholder="输入网址 (https://...)">
+            <input type="text" id="tag-input" placeholder="添加标签 (用逗号分隔)">
+            <button id="save-btn">💾 保存</button>
+            <button id="save-tab-btn">📑 保存当前标签页</button>
+        </div>
+        
+        <div class="controls">
+            <button id="clear-all-btn">🗑️ 清空所有</button>
+        </div>
+        
+        <div id="websites-container">
+            <div id="no-items" class="no-items">
+                <p>还没有收藏任何网站</p>
+                <p>速速添加你喜欢的网站吧！</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="index.js"></script>
+</html>
