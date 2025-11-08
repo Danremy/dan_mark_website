@@ -6,7 +6,13 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #fef5f7 0%, #f8f4ff 100%);
+    background: linear-gradient(135deg,
+        #ff9a9e 0%,
+        #fad0c4 15%,
+        #fbc2eb 35%,
+        #a6c1ee 55%,
+        #f6d365 75%,
+        #fda085 100%);
     min-height: 100vh;
     padding: 20px;
 }
@@ -15,18 +21,24 @@ body {
     max-width: 800px;
     min-width: 400px;
     margin: 0 auto;
-    background: rgba(251, 217, 255, 0.9);
+    background: linear-gradient(135deg,
+        rgba(255, 175, 189, 0.9),
+        rgba(255, 223, 186, 0.9),
+        rgba(186, 225, 255, 0.9));
     border-radius: 30px;
     padding: 30px;
-    box-shadow: 0 10px 30px rgba(219, 112, 147, 0.1);
+    box-shadow: 0 10px 30px rgba(58, 75, 102, 0.15);
 }
 
 header h1 {
     text-align: center;
-    color: #db7093;
     margin-bottom: 30px;
     font-size: 2.2em;
-    text-shadow: 2px 2px 4px rgba(219, 112, 147, 0.1);
+    background: linear-gradient(90deg, #ff6f91, #ff9671, #ffc75f, #f9f871, #84fab0, #8fd3f4);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .search-section {
@@ -36,17 +48,17 @@ header h1 {
 #search-input {
     width: 100%;
     padding: 15px 20px;
-    border: 2px solid #dda0dd;
+    border: 2px solid transparent;
     border-radius: 25px;
     font-size: 16px;
     outline: none;
     transition: all 0.3s ease;
-    background: rgba(255, 255, 255, 0.8);
+    background: linear-gradient(135deg, #ffffff, #ffffff) padding-box,
+        linear-gradient(135deg, #ff6f91, #ff9671, #ffc75f, #f9f871) border-box;
 }
 
 #search-input:focus {
-    border-color: #db7093;
-    box-shadow: 0 0 15px rgba(219, 112, 147, 0.2);
+    box-shadow: 0 0 20px rgba(132, 250, 176, 0.4);
 }
 
 .input-section {
@@ -57,17 +69,17 @@ header h1 {
 
 #url-input, #tag-input {
     padding: 12px 15px;
-    border: 2px solid #dda0dd;
+    border: 2px solid transparent;
     border-radius: 15px;
     font-size: 14px;
     outline: none;
     transition: all 0.3s ease;
-    background: rgba(255, 255, 255, 0.8);
+    background: linear-gradient(135deg, #ffffff, #ffffff) padding-box,
+        linear-gradient(135deg, #a6c1ee, #84fab0, #ffc75f) border-box;
 }
 
 #url-input:focus, #tag-input:focus {
-    border-color: #db7093;
-    box-shadow: 10px 0 10px rgba(244, 95, 145, 0.2);
+    box-shadow: 0 0 20px rgba(255, 151, 112, 0.3);
 }
 
 button {
@@ -82,23 +94,27 @@ button {
 }
 
 #save-btn, #save-tab-btn {
-    background: linear-gradient(135deg, #ff699b, #ffc2ff);
+    background: linear-gradient(135deg, #ff6f91, #ff9671, #ffc75f);
     color: white;
 }
 
 #save-btn:hover, #save-tab-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(219, 112, 147, 0.3);
+    box-shadow: 0 5px 20px rgba(255, 151, 112, 0.35);
 }
 
 #clear-all-btn {
     background: rgba(255, 255, 255, 0.9);
-    color: #db7093;
-    border: 2px solid #db7093;
+    color: #ff6f91;
+    border: 2px solid transparent;
+    background-image: linear-gradient(135deg, #ffffff, #ffffff),
+        linear-gradient(135deg, #a6c1ee, #84fab0, #ffc75f);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
 }
 
 #clear-all-btn:hover {
-    background: #db7093;
+    background-image: linear-gradient(135deg, #ff6f91, #ff9671, #ffc75f);
     color: white;
     transform: translateY(-2px);
 }
@@ -110,18 +126,21 @@ button {
 
 .website-item {
     background: rgba(255, 255, 255, 0.9);
-    border: 2px solid #dda0dd;
+    border: 2px solid transparent;
     border-radius: 15px;
     padding: 20px;
     margin-bottom: 15px;
     transition: all 0.3s ease;
     position: relative;
+    background-image: linear-gradient(135deg, #ffffff, #ffffff),
+        linear-gradient(135deg, #84fab0, #8fd3f4, #ffc75f);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
 }
 
 .website-item:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(219, 112, 147, 0.15);
-    border-color: #ff0000;
+    box-shadow: 0 8px 25px rgba(132, 250, 176, 0.35);
 }
 
 .website-header {
@@ -132,7 +151,7 @@ button {
 }
 
 .website-url {
-    color: #db7093;
+    color: #5b5f97;
     text-decoration: none;
     font-weight: 600;
     font-size: 16px;
@@ -144,7 +163,7 @@ button {
 }
 
 .delete-btn {
-    background: #ff6b6b;
+    background: linear-gradient(135deg, #ff6f91, #ff9671);
     color: white;
     padding: 8px 12px;
     font-size: 12px;
@@ -153,7 +172,7 @@ button {
 }
 
 .delete-btn:hover {
-    background: #ff5252;
+    background: linear-gradient(135deg, #ff9671, #ffc75f);
     transform: scale(1.05);
 }
 
@@ -165,24 +184,27 @@ button {
 }
 
 .tag {
-    background: linear-gradient(135deg, #dda0dd, #db7093);
-    color: white;
+    background: linear-gradient(135deg, #84fab0, #8fd3f4, #a6c1ee);
+    color: #2f2d56;
     padding: 4px 12px;
     border-radius: 12px;
     font-size: 12px;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .no-items {
     text-align: center;
-    color: #dda0dd;
+    color: #5b5f97;
     padding: 60px 20px;
 }
 
 .no-items p:first-child {
     font-size: 1.5em;
     margin-bottom: 10px;
-    color: #db7093;
+    background: linear-gradient(90deg, #ff6f91, #ff9671, #ffc75f, #f9f871);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 .hidden {
@@ -197,10 +219,12 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(45deg, 
-        transparent 30%, 
-        rgba(255, 105, 155, 0.1) 50%, 
-        transparent 70%);
+    background: linear-gradient(45deg,
+        transparent 25%,
+        rgba(255, 111, 145, 0.15) 40%,
+        rgba(132, 250, 176, 0.15) 60%,
+        rgba(143, 211, 244, 0.15) 80%,
+        transparent 95%);
     animation: shimmer 3s ease-in-out infinite;
     pointer-events: none;
     z-index: -2;
